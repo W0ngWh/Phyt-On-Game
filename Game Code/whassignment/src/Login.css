@@ -1,0 +1,170 @@
+.body-login {
+    background-image: url('./assets/Background2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Slide out animation */
+.slide-out {
+    animation: slideOutRight 0.5s forwards;
+}
+
+@keyframes slideOutRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Fade-in animation for the login form */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-bar {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px; 
+}
+
+fieldset.login-bar input {
+    color: black;
+}
+
+legend.Fid {
+    background-color: aliceblue;
+    color: black;
+    font-size: 1.5em;
+    font-family: fantasy;
+    padding: 5px 10px;
+}
+
+.field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.field label {
+    font-size: 14px;
+    color: #333;
+}
+
+.login-button {
+    font-family: fantasy;
+    font-size: 25px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+.login-button:hover {
+    background-color: #8be3d8;
+    transform: scale(1.05);
+}
+
+.login-button:focus, .login-button:active {
+    outline: none;
+    transform: scale(0.95);
+}
+
+.reg-text {
+    color: aliceblue;
+    font-size: 14px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+p.error-message {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .login-bar {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .login-button {
+        font-size: 20px;
+        padding: 5px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-bar {
+        padding: 10px;
+    }
+
+    .field input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .login-button {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    legend {
+        font-size: 1.2em;
+    }
+
+    .reg-text {
+        font-size: 12px;
+    }
+
+    .error-message {
+        color: red;
+        font-size: 10px;
+        margin-top: 10px;
+    }
+}

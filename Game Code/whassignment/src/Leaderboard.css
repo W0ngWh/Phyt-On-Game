@@ -1,0 +1,110 @@
+.body-leaderboard {
+    background-image: url('./assets/Background4.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: shrinkHeight 1.5s ease forwards;
+    text-align: center;
+    font-family: 'fantasy';
+}
+
+.leaderboard-container {
+    padding: 20px;
+    text-align: center;
+    background-color: blanchedalmond;
+    color: black;
+    font-family: fantasy;
+    max-width: 90%;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    transition: transform 0.1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.leaderboard-table-container {
+    max-height: 60vh;  
+    overflow-y: auto;  
+    margin: 0 auto;
+    width: 100%;
+}
+
+.leaderboard-table {
+    width: 100%;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.leaderboard-table th {
+    background-color: bisque;
+}
+
+.leaderboard-table tr:nth-child(even) {
+    background-color: bisque;
+}
+
+.leaderboard-table tr:hover {
+    background-color: bisque;
+}
+
+table.leaderboard-table{
+    border-spacing: 2px;
+}
+
+
+@media (max-width: 768px) {
+    .leaderboard-container {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .leaderboard-table th, 
+    .leaderboard-table td {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .leaderboard-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .leaderboard-table th, 
+    .leaderboard-table td {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+}

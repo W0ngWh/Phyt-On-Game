@@ -1,0 +1,89 @@
+.story-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000; 
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: fantasy;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 1s; 
+    transition: transform 0.1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+
+.skip-button {
+    position: absolute;
+    bottom: -80px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.skip-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.welcome-message {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+div#detach-button-host {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .story-video {
+        max-width: 100%;
+    }
+
+    .skip-button {
+        bottom: -60px;
+        right: 15px;
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .welcome-message {
+        font-size: 1.2rem;
+    }
+}

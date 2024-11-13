@@ -1,0 +1,120 @@
+.body-menu {
+    background-image: url('./assets/Background1.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: shrinkHeight 1.5s ease forwards; 
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Keyframes for shrinking the height */
+@keyframes shrinkHeight {
+    from {
+        height: 100vh;
+    }
+    to {
+        height: 90vh;
+    }
+}
+
+/* Game title styling */
+.game-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+/* Logo animation */
+.logo {
+    max-width: 500px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 0.5s; /* Adds delay so it fades in slightly after the height animation */
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+.game-title .logo {
+    max-width: 500px;
+    height: auto;
+}
+
+
+.start-game-button {
+    font-size: 24px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 15px;
+    background-color: #E7F6D5;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+    animation-delay: 1s; 
+    transition: transform 0.1s ease-in-out;
+}
+
+.selections{
+    display: flex;
+}
+
+.selections a {
+    padding-block: 10px;
+}
+
+.start-game-button:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.start-game-button:focus, .start-game-button:active {
+    outline: none;
+    transform: scale(0.95);
+}
+
+
+@media (max-width: 768px) {
+    .game-title .logo {
+        max-width: 350px;
+    }
+
+    .start-game-button {
+        font-size: 20px;
+        padding: 12px 24px;
+    }
+
+    .selections {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-title .logo {
+        max-width: 200px;
+    }
+
+    .start-game-button {
+        font-size: 10px;
+        padding: 5px 15px;
+
+    }
+
+    .selections {
+        flex-direction: column;
+    }
+}

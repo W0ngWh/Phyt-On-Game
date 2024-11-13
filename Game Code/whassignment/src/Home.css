@@ -1,0 +1,84 @@
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+.body-home {
+    background-image: url('./assets/Background1.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: shrinkHeight 1.5s ease forwards; 
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+@keyframes shrinkHeight {
+    from {
+        height: 100vh;
+    }
+    to {
+        height: 90vh;
+    }
+}
+
+.game-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.game-title .logo {
+    max-width: 500px;
+    height: auto;
+}
+
+.start-game-button {
+    font-family: fantasy;
+    font-size: 25px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: aquamarine;
+    transition: transform 0.1s ease-in-out;
+}
+
+.start-game-button:hover {
+    transform: scale(1.05); 
+}
+
+.start-game-button:focus, .start-game-button:active {
+    outline: none;
+    transform: scale(0.95); 
+}
+
+
+
+@media (max-width: 768px) {
+    .game-title .logo {
+        max-width: 250px;
+    }
+
+    .start-game-button {
+        font-size: 20px;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-title .logo {
+        max-width: 200px;
+    }
+
+    .start-game-button {
+        font-size: 10px;
+        padding: 5px 15px;
+
+    }
+}

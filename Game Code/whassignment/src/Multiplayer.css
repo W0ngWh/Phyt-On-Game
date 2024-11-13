@@ -1,0 +1,141 @@
+
+.body-Multiplayer {
+    background-image: url('./assets/Background3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.player-selection {
+    text-align: center;
+}
+
+.map-container.fade-in {
+    opacity: 1;
+}
+
+.player-selection h1 {
+    padding: 10px;
+}
+
+  .map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: beige;
+    color: black;
+    font-family: fantasy;
+  }
+  
+  h1, h2 {
+    color: black;
+    margin: 0;
+  }
+  
+  .answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .answer {
+    background-color: #ffffff;
+    color: white;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .answer:hover {
+    background-color: #45a049;
+    color: #ffffff;
+  }
+  
+  .correct {
+    background-color: #4caf50;
+    color: #ffffff;
+  }
+  
+  .answer-incorrect {
+    background-color: #f44336;
+    color: #ffffff;
+  }
+  
+  .correct-answer {
+    background-color: #d1e7dd;
+    border: 2px solid #4caf50;
+    color: #4caf50;
+  }
+
+  
+  .game-over {
+    text-align: center;
+    padding: 20px;
+    background-color: #fbe9e7;
+    border: 2px solid #f44336;
+    border-radius: 8px;
+  }
+  
+  .game-over h1 {
+    color: #f44336;
+  }
+  
+  .game-over p {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .status p {
+    padding: 2px;
+    margin: 2px;
+}
+
+.status{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.power-up-screen h2 {
+    padding: 4px;
+    font-size: 40px;
+}
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+
+  @media (max-width:1919) {
+    .map-container.fade-in {
+      height: 70vh;
+  }
+  }
