@@ -2,7 +2,7 @@
 get it here at:
 https://sourceforge.net/projects/wampserver/
 
-2. We included the database .sql file for the system. It can be found as
+2. I've included the database .sql file for the system. It can be found as
 "phytondb.sql"
 
 3. Please open phpMyAdmin in the Wamp server, then create a new database named:
